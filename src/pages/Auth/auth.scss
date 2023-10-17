@@ -1,0 +1,24 @@
+@import "~/src/scss/index";
+
+.auth {
+  height: 100vh;
+  width: 100vw;
+  background: rgb(15,221,38);
+  background: radial-gradient(circle, rgba(15,221,38,1) 0%, rgba(255,255,255,0.8323704481792717) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    color: white;
+    width: 500px;
+    border-radius: 10px;
+    background-color: black;
+    padding: 50px 70px;
+    &-logo {
+        width: 200px;
+        margin: 0 auto;
+        align-content: center;
+    }
+  }
+}
