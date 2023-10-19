@@ -1,14 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import {themeOptions} from "./MUI/theme"
+import "./utils/firebase";
+import { ThemeProvider } from "@emotion/react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <ThemeProvider theme={themeOptions}>
     <App />
-  </React.StrictMode>
+  </ThemeProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
