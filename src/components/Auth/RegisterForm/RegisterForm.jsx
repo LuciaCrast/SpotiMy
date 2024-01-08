@@ -2,14 +2,16 @@ import React from "react";
 import { useState } from "react";
 import { Box, Button, Grid, TextField } from "@mui/material";
 import { useFormik } from "formik";
-import { initialValues } from "./RegisterForm.data";
+import { initialValues, validateForm } from "./RegisterForm.data";
 import "./registerForm.scss";
 
 export function RegisterForm({ goBack }) {
   const formik = useFormik({
     initialValues: initialValues(),
+    validationSchema: validateForm(),
+    validateOnChange: false,
     onSubmit: (formValue) => {
-      console.log("REgister OK");
+      console.log("Register OK");
       console.log(formValue);
     },
   });
@@ -21,48 +23,49 @@ export function RegisterForm({ goBack }) {
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <TextField
-              // error={errors.email}
-              // onChange={(e) => setEmailValue(e.target.value)}
-              required
+              error={formik.touched.email && Boolean(formik.errors.email)}
               name="email"
               value={formik.values.email}
-              label="Email"
+              label="Email *"
               fullWidth
               id="outlined-size-small"
               onChange={formik.handleChange}
-              // helperText={errors.email ? "Incorrect entry" : ""}
+              helperText={formik.touched.email && formik.errors.email}
             />
           </Grid>
           <Grid item xs={6}>
             <TextField
-              required
+              error={formik.touched.username && Boolean(formik.errors.username)}
               name="username"
               value={formik.values.username}
-              label="Name"
+              label="Name *"
               id="outlined-size-small"
               onChange={formik.handleChange}
+              helperText={formik.touched.username && formik.errors.username}
               fullWidth
             />
           </Grid>
           <Grid item xs={6}>
             <TextField
-              required
+              error={formik.touched.lastname && Boolean(formik.errors.lastname)}
               name="lastname"
               value={formik.values.lastname}
-              label="Last Name"
+              label="Last Name *"
               id="outlined-size-small"
               onChange={formik.handleChange}
+              helperText={formik.touched.lastname && formik.errors.lastname}
               fullWidth
             />
           </Grid>
           <Grid item xs={12}>
             <TextField
-              required
+              error={formik.touched.password && Boolean(formik.errors.password)}
               name="password"
               value={formik.values.password}
-              label="Password"
+              label="Password *"
               type="password"
               onChange={formik.handleChange}
+              helperText={formik.touched.password && formik.errors.password}
               fullWidth
               id="outlined-size-small"
             />
