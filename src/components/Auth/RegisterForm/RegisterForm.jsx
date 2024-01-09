@@ -1,18 +1,23 @@
 import React from "react";
-import { useState } from "react";
 import { Box, Button, Grid, TextField } from "@mui/material";
 import { useFormik } from "formik";
+import { Auth } from "../../../Api";
 import { initialValues, validateForm } from "./RegisterForm.data";
 import "./registerForm.scss";
+
+const auth = new Auth();
 
 export function RegisterForm({ goBack }) {
   const formik = useFormik({
     initialValues: initialValues(),
     validationSchema: validateForm(),
     validateOnChange: false,
-    onSubmit: (formValue) => {
-      console.log("Register OK");
-      console.log(formValue);
+    onSubmit: async (formValue) => {
+      try {
+        await auth.register(formValue.email, formValue.password);
+      } catch (error) {
+        console.error(error);
+      }
     },
   });
 
@@ -38,7 +43,7 @@ export function RegisterForm({ goBack }) {
               error={formik.touched.username && Boolean(formik.errors.username)}
               name="username"
               value={formik.values.username}
-              label="Name *"
+              label="Nombre *"
               id="outlined-size-small"
               onChange={formik.handleChange}
               helperText={formik.touched.username && formik.errors.username}
@@ -50,7 +55,7 @@ export function RegisterForm({ goBack }) {
               error={formik.touched.lastname && Boolean(formik.errors.lastname)}
               name="lastname"
               value={formik.values.lastname}
-              label="Last Name *"
+              label="Apellidos *"
               id="outlined-size-small"
               onChange={formik.handleChange}
               helperText={formik.touched.lastname && formik.errors.lastname}
@@ -62,7 +67,7 @@ export function RegisterForm({ goBack }) {
               error={formik.touched.password && Boolean(formik.errors.password)}
               name="password"
               value={formik.values.password}
-              label="Password *"
+              label="Contraseña *"
               type="password"
               onChange={formik.handleChange}
               helperText={formik.touched.password && formik.errors.password}
@@ -71,7 +76,7 @@ export function RegisterForm({ goBack }) {
             />
           </Grid>
         </Grid>
-        <Button type="submit">Submit</Button>
+        <Button type="submit">Enviar</Button>
       </form>
 
       <Button onClick={goBack}>Atrás</Button>
