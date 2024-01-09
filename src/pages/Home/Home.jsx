@@ -1,9 +1,13 @@
-import "./home.scss"
+import { Button } from "@mui/material";
+import { Auth } from "../../Api";
+import "./home.scss";
 
-export function Home (){
-    return(
-        <div>
-            <h1>HOME</h1>
-        </div>
-    )
+const auth = new Auth();
+export function Home() {
+  return (
+    <div>
+      <h1>HOME</h1>
+      <Button onClick={auth.logout}>Cerrar Sesión</Button>
+    </div>
+  );
 }
