@@ -10,8 +10,6 @@ export function initialValues() {
 export function validateForm() {
   return Yup.object({
     email: Yup.string().email("Invalid email").required("Require"),
-    password: Yup.string()
-      .required("Require")
-      .min(8, "You need 8 charactes minimum"),
+    password: Yup.string().required("Require").min(8, "Invalid Password"),
   });
 }

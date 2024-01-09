@@ -1,15 +1,21 @@
 import { Button, Grid, TextField, Box } from "@mui/material";
 import { useFormik } from "formik";
 import { initialValues, validateForm } from "./LoginForm.data";
+import { Auth } from "../../../Api";
+
+const auth = new Auth();
 
 export function LoginForm({ openRegister, goBack }) {
   const formik = useFormik({
     initialValues: initialValues(),
     validationSchema: validateForm(),
     validateOnChange: false,
-    onSubmit: (formValue) => {
-      console.log("Register OK");
-      console.log(formValue);
+    onSubmit: async (formValue) => {
+      try {
+        await auth.login(formValue.email, formValue.password);
+      } catch (error) {
+        console.error(error);
+      }
     },
   });
 
@@ -45,7 +51,7 @@ export function LoginForm({ openRegister, goBack }) {
             />
           </Grid>
         </Grid>
-        <Button type="submit">Enviar</Button>
+        <Button type="submit">Iniciar Sesión</Button>
       </form>
       <Button onClick={goBack}>Atrás</Button>
       <Button onClick={openRegister}>Regístrate</Button>
