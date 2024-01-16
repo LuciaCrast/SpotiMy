@@ -1,5 +1,8 @@
+@import "./scss/index.scss";
+
 * {
   margin: 0;
+  color: $fonts;
   &::-webkit-scrollbar {
     display: none;
   }

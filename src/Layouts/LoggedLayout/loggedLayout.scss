@@ -1,16 +1,18 @@
+@import "../../scss/index.scss";
+
 $footerHeight: 100px;
 $menuWidth: 300px;
 
 .logged-layout {
   height: 100vh;
-  background-color: black;
+  background-color: $background-dark;
 
   &__content {
     display: flex;
     height: calc(100% - $footerHeight);
   }
   &__left-menu {
-    background-color: grey;
+    background-color: $background-dark;
     width: $menuWidth;
   }
   &__children-content {
@@ -25,8 +27,7 @@ $menuWidth: 300px;
   }
   &__footer {
     position: relative;
-    background-color: rgb(27, 27, 27);
+    background-color: $background-light;
     height: $footerHeight;
-    border-top: 1px solid grey;
   }
 }
