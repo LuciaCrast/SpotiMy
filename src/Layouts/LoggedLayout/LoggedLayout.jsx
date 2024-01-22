@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
+import { LeftMenu, TopBar, Footer } from "../../components/Layouts";
+
 import "./loggedLayout.scss";
-import { LeftMenu } from "../../components/Layouts/LeftMenu/LeftMenu";
 
 export function LoggedLayout({ children }) {
   return (
@@ -11,13 +12,13 @@ export function LoggedLayout({ children }) {
         </Box>
         <Box className="logged-layout__children-content">
           <Box className="logged-layout__top-bar">
-            <p>Top Bar</p>
+            <TopBar />
           </Box>
-          <Box className="">{children}</Box>
+          <Box className="logged-layout__display">{children}</Box>
         </Box>
       </Box>
       <Box className="logged-layout__footer">
-        <p>Footer</p>
+        <Footer />
       </Box>
     </Box>
   );
