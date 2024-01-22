@@ -49,6 +49,7 @@ export function LeftMenu() {
             <AddCircle fontSize="small" />
           </ListItemIcon>
         </MenuItem>
+
         <MenuItem onClick={() => console.log("Subir Album")}>
           <ListItemText>New album</ListItemText>
           <ListItemIcon>
