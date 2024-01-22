@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { LoggedLayout } from "../Layouts";
-import { Home, Artists, Artist, Albums, Album, Profile } from "../pages";
+import { Home, Artists, Artist, Albums, Album, Profile } from "../Pages";
 
 export function LoggedNavigation() {
   return (
