@@ -1,0 +1,26 @@
+@import "../../../scss/index.scss";
+
+.top-bar {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  &__goBack {
+    cursor: pointer;
+    padding: 5px;
+  }
+  &__endBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__profile {
+    padding: 0 5px 0 15px;
+  }
+
+  &__exit {
+    cursor: pointer;
+    padding: 5px;
+  }
+}
