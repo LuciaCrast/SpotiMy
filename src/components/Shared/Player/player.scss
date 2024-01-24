@@ -1,0 +1,16 @@
+.player {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  .MuiSvgIcon-root {
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+  }
+
+  &__linearProgress {
+    width: 90% !important;
+  }
+}
