@@ -3,7 +3,7 @@
   height: 100%;
   align-items: center;
   justify-content: space-between;
-  margin: 0 20px;
+  margin: 0 10px;
   &__left {
     display: flex;
     align-items: center;
@@ -13,9 +13,21 @@
     display: flex;
     align-items: center;
     height: 70px;
-    width: 100%;
   }
   &__cardMedia {
     height: 50px;
+    width: 50px !important;
+  }
+  &__center {
+    width: 60%;
+  }
+  &__right {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
+  }
+  &__slider {
+    width: 65% !important;
   }
 }
