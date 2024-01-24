@@ -1,0 +1,13 @@
+@import "../../scss/index.scss";
+.profile {
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    border: 1px solid $background-light;
+    background-color: $background-light;
+    margin: 30px 50px 0 0;
+    padding: 10px;
+  }
+}
