@@ -1,0 +1,12 @@
+.avatar {
+  &__img {
+    width: 70px;
+    height: 70px;
+    border-style: dashed;
+    padding: 10px;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+  }
+}
