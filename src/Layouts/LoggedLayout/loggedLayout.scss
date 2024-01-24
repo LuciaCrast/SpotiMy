@@ -10,12 +10,12 @@ $menuWidth: 300px;
   &__content {
     display: flex;
     height: calc(100% - $footerHeight);
-    padding-bottom: 20px;
   }
   &__left-menu {
     background-color: $background-dark;
     width: $menuWidth;
     margin-left: 10px;
+    border-right: 1px dotted $background-light;
   }
   &__children-content {
     width: calc(100% - $menuWidth);
@@ -28,10 +28,9 @@ $menuWidth: 300px;
     z-index: 1;
   }
   &__display {
-    padding: 50px 0 0 20px;
+    padding: 50px 0 0 40px;
   }
   &__footer {
-    //position: relative;
     background-color: $background-light;
     height: $footerHeight;
   }
