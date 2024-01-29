@@ -12,8 +12,6 @@ export function TopBar() {
   const navigation = useNavigate();
   const userData = user.getMe();
 
-  console.log(userData);
-
   const displayName = userData.displayName || "Mi cuenta";
   const avatar = userData.photoURL;
 
