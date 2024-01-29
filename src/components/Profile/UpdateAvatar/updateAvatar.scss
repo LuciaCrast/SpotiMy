@@ -1,9 +1,10 @@
 .avatar {
+  padding: 10px;
   &__img {
-    width: 70px;
-    height: 70px;
+    width: 70px !important;
+    height: 70px !important;
     border-style: dashed;
-    padding: 10px;
+
     &:hover {
       cursor: pointer;
       opacity: 0.6;
