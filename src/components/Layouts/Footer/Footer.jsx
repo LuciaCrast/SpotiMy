@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Box, Card, CardContent, CardMedia, Slider } from "@mui/material";
 import { noImage } from "../../../assets";
 import { Player } from "../../Shared";
-import { VolumeDown, VolumeUp } from "@material-ui/icons";
+import { VolumeUp } from "@mui/icons-material";
+import { VolumeDown } from "@mui/icons-material";
 import "./footer.scss";
 
 export function Footer() {

@@ -1,6 +1,7 @@
 import { Box, Avatar } from "@mui/material";
 import { Auth, User } from "../../../Api";
-import { ArrowBackIos, ExitToApp } from "@material-ui/icons";
+import { ArrowBackIos } from "@mui/icons-material";
+import { ExitToApp } from "@mui/icons-material";
 import { Link, useNavigate } from "react-router-dom";
 import "./topBar.scss";
 

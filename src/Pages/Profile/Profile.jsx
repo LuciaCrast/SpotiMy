@@ -1,7 +1,7 @@
 import { Box, Button } from "@mui/material";
 import { User } from "../../Api";
-import "./profile.scss";
 import { UpdateAvatar } from "../../components/Profile";
+import "./profile.scss";
 
 const userController = new User();
 

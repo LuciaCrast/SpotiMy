@@ -1,5 +1,6 @@
 import { Box, LinearProgress } from "@mui/material";
-import { PlayCircleFilled, PauseCircleFilled } from "@material-ui/icons";
+import { PauseCircleFilled } from "@mui/icons-material";
+import { PlayCircleFilled } from "@mui/icons-material";
 import "./player.scss";
 export function Player() {
   const playing = false;

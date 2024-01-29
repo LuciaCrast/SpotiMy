@@ -6,7 +6,10 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
-import { Home, Group, FolderShared, AddCircle } from "@material-ui/icons";
+import { Home } from "@mui/icons-material";
+import { Group } from "@mui/icons-material";
+import { FolderShared } from "@mui/icons-material";
+import { AddCircle } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import "./leftMenu.scss";
 
