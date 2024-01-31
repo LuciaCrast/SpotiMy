@@ -1,4 +1,4 @@
-import { Box, Avatar } from "@mui/material";
+import { Box, Avatar, useFormControl } from "@mui/material";
 import { defaultUser } from "../../../assets";
 import { useDropzone } from "react-dropzone";
 import { useCallback, useState } from "react";
@@ -16,7 +16,8 @@ export function UpdateAvatar() {
     const file = acceptedFile[0];
     setAvatarUrl(URL.createObjectURL(file));
     const response = await storageController.uploadFile(file, "avatar", uid);
-    console.log(response);
+    const url = await storageController.getUrlFile(response.metadata.fullPath);
+    await user.updateAvatarUser(url);
   });
 
   const { getInputProps, getRootProps } = useDropzone({ onDrop });
