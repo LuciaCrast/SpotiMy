@@ -1,0 +1,21 @@
+@import "../../../scss/index.scss";
+
+.MuiDialog-root {
+  margin-left: $menuWidth;
+
+  form {
+    min-width: 50%;
+    min-height: 30%;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  h2 {
+    font-size: 1.8em;
+    padding-bottom: 20px;
+  }
+}
+
+.MuiDialog-container {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
